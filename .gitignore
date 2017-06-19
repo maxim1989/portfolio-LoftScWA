@@ -37,3 +37,8 @@ build
 # Node.JS
 node_modules
 npm-debug.log
+
+source/images/spriteJpg.jpg
+source/images/spritePng.png
+source/style/spriteJpg.scss
+source/style/spritePng.scss
