@@ -6,7 +6,7 @@ block variables
 block content
   body(class='font-water')
     div(class="wrapper")
-      section(class="header")
+      section(class="section header")
         div(class="container container-align container_padding_right container_padding_top")
           a(class="header__auth", href="#") авторизироваться
 
@@ -17,16 +17,7 @@ block content
               img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
             div(class="about__name") Фёдоров Максим
             div(class="about__description about__description_margin_bottom") личный сайт веб разработчика
-            ul(class="soc")
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+            include ../common/soc
             div(class="buttons")
               a(class="buttons__link", href='#') мои работы
               a(class="buttons__link", href='#') обо мне

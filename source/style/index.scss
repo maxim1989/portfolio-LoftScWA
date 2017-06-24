@@ -94,24 +94,6 @@
   width: 380px;
 }
 
-.soc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.soc__item {
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-.soc_pic {
-  fill: #8c9895;
-  &:hover {
-    fill: #4e8839;
-  }
-}
-
 .buttons {
   position: absolute;
   bottom: -52px;
@@ -144,11 +126,11 @@
   bottom: 40px;
   right: 0;
   left: 0;
+  color: #fff;
 }
 
 .owner {
   font-size: 16px;
   font-family: 'robotoregular', sans-serif;
-  color: #fff;
   text-align: center;
 }

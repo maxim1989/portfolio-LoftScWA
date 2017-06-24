@@ -1,0 +1,17 @@
+.soc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soc__item {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.soc__pic {
+  fill: #8c9895;
+  &:hover {
+    fill: #4e8839;
+  }
+}
