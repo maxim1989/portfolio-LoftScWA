@@ -379,6 +379,23 @@
   box-sizing: border-box;
   padding: 30px;
   font-size: 18px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    top: 50%;
+    right: 0;
+    background-color: #69726f;
+    transform: translateY(-50%);
+  }
+
+  &:last-child:after {
+    display: none;
+  }
 }
 
 .soc_align_left {
