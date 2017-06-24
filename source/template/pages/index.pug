@@ -1,17 +1,37 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+  - var title = 'Страница приветствия'
 
 block content
-  include ../common/_greating
-  div(class="icon-viking")
-  div(class="icon-work-1")
-  div(class="icon-work-2")
-  div(class="icon-work-3")
-  div(class="icon-work-4")
-  div(class="icon-cup")
-  div(class="icon-forest_preloader")
-  div(class="icon-style_forest")
-  div(class="icon-water-maps")
-  div(class="icon-water")
+  body(class='font-water')
+    div(class="wrapper")
+      section(class="header")
+        div(class="container container-align container_padding_right container_padding_top")
+          a(class="header__auth", href="#") авторизироваться
+
+      section(class="about")
+        div(class="container container_width")
+          div(class="about__content about__content_padding_bottom")
+            div(class="about__avatar")
+              img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
+            div(class="about__name") Фёдоров Максим
+            div(class="about__description about__description_margin_bottom") личный сайт веб разработчика
+            ul(class="soc")
+              li(class="soc__item")
+                a(class="soc__link", href="#")
+                  svg(class="soc_pic", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
+              li(class="soc__item")
+                a(class="soc__link", href="#")
+                  svg(class="soc_pic" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
+              li(class="soc__item")
+                a(class="soc__link", href="#")
+                  svg(class="soc_pic" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+            div(class="buttons")
+              a(class="buttons__link", href='#') мои работы
+              a(class="buttons__link", href='#') обо мне
+              a(class="buttons__link", href='#') блог
+
+      section(class="footer")
+        div(class="container")
+          include ../common/footer-owner

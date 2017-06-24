@@ -1,0 +1,154 @@
+.font-water {
+  background-size: cover;
+  background-image: url("../img/water.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.background {
+  position: absolute;
+  z-index: -5;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.container-align {
+  text-align: right;
+}
+
+.container_padding_right {
+  padding-right: 10px;
+}
+
+.container_padding_top {
+  padding-top: 20px;
+}
+
+.header__auth {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'robotomedium', sans-serif;
+  padding: 15px 30px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-radius: 30px;
+
+  &:first-letter{
+    text-transform: uppercase;
+  }
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-60%);
+}
+
+.about__content {
+  background-color: rgba(18, 38, 32, .6);
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.about__content_padding_bottom {
+  padding-bottom: 40px;
+}
+
+.about__avatar {
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.about__pic {
+  width: 140px;
+  height: 140px;
+  vertical-align: middle;
+}
+
+.about__name {
+  font-size: 28px;
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+}
+
+.about__description {
+  color: #d1d6d4;
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  &:first-letter{
+    text-transform: uppercase;
+  }
+}
+
+.about__description_margin_bottom {
+  margin-bottom: 35px;
+}
+
+.container_width {
+  width: 380px;
+}
+
+.soc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soc__item {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.soc_pic {
+  fill: #8c9895;
+  &:hover {
+    fill: #4e8839;
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: -52px;
+}
+
+.buttons__link {
+  padding: 15px 30px;
+  display: inline-block;
+  background-color: #618f54;
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  &:first-letter{
+    text-transform: uppercase;
+  }
+  &:first-child {
+    border-right: 2px solid #9fb99e;
+  }
+  &:last-child {
+    border-left: 2px solid #9fb99e;
+    padding: 15px 30px 15px 35px;
+  }
+  &:hover {
+    background-color: #4a8039;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+}
+
+.owner {
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  color: #fff;
+  text-align: center;
+}
