@@ -10,7 +10,6 @@ block content
         //img(class='header-bg', src='assets/img/water.jpg')
         div(class="header-about__title-svg")
           svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
-        div(class="soc_position_header-about")
         ul(class="soc soc_position_header-about")
           li(class="soc__item")
             a(class="soc__link", href="#")
@@ -23,7 +22,8 @@ block content
               svg(class="soc__pic soc__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
         include ../common/burger
         div(class="arrow-down")
-          svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+          a(class='arrow-down__link' href="#")
+            svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
         div(class="container container_align_center container_horisontal_center")
           div(class="about__avatar about__avatar__position_relative")
             img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
