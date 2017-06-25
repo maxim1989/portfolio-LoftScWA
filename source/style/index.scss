@@ -38,6 +38,11 @@
   &:first-letter{
     text-transform: uppercase;
   }
+
+  &:hover {
+    background-color: #4e8839;
+    border-color: #4e8839;
+  }
 }
 
 .about {
@@ -57,33 +62,6 @@
 
 .about__content_padding_bottom {
   padding-bottom: 40px;
-}
-
-.about__avatar {
-  border-radius: 50%;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.about__pic {
-  width: 140px;
-  height: 140px;
-  vertical-align: middle;
-}
-
-.about__name {
-  font-size: 35px;
-  font-family: 'robotomedium', sans-serif;
-  color: #fff;
-}
-
-.about__description {
-  color: #d1d6d4;
-  font-size: 16px;
-  font-family: 'robotoregular', sans-serif;
-  &:first-letter{
-    text-transform: uppercase;
-  }
 }
 
 .about__description_margin_bottom {
@@ -127,10 +105,4 @@
   right: 0;
   left: 0;
   color: #fff;
-}
-
-.owner {
-  font-size: 16px;
-  font-family: 'robotoregular', sans-serif;
-  text-align: center;
 }

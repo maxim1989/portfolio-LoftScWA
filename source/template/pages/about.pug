@@ -7,28 +7,11 @@ block content
   body
     div(class="wrapper")
       section(class='section header-about font-water')
-        //img(class='header-bg', src='assets/img/water.jpg')
         div(class="header-about__title-svg")
           svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
-        ul(class="soc soc_position_header-about")
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+        include ../common/soc_top
         include ../common/burger
-        div(class="arrow-down")
-          a(class='arrow-down__link' href="#")
-            svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-        div(class="container container_align_center container_horisontal_center")
-          div(class="about__avatar about__avatar__position_relative")
-            img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-          div(class="about__name about__name__position_relative") Фёдоров Максим
-          div(class="about__description about__description__position_relative") личный сайт веб разработчика
+        include ../common/avatar
       section(class='section main-about')
         svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
           polygon(class="triangle-left", points="0,0 0,186 500.8,186 500.8,75.5")
@@ -130,26 +113,6 @@ block content
                   svg(class="contacts__svg" width="24px" height="21.654px") <use xlink:href="assets/img/sprite.svg#map_marker"></use>
                 div(class="contacts__text") Новосиборск, ул. Инская, д. 4
       section(class='footer-about')
-        div(class="footer-about__content")
-          div(class="footer-about__section")
-            p(class="footer-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-          div(class="footer-about__section")
-            a(class="footer-about_link") Мои работы
-            a(class="footer-about_link") Обо мне
-            a(class="footer-about_link") Блог
-            a(class="footer-about_link") Авторизация
-            ul(class="soc soc_align_left soc_margin_top")
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-          div(class="footer-about__section")
-            p(class="footer-about__text") Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
-            p(class="footer-about__author") - Martin Golding
+        include ../common/footer
         div(class="footer-about__container")
           include ../common/footer-owner
