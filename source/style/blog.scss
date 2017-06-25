@@ -21,8 +21,8 @@
 
 .header-blog__title {
   color: #fff;
-  font-family: 'robotomedium', sans-serif;
-  font-size: 44px;
+  font-family: 'sansus_webissimoregular', sans-serif;
+  font-size: 63px;
   text-align: center;
   position: relative;
   margin-bottom: 30px;
@@ -36,12 +36,14 @@
     background-color: #fff;
     left: 50%;
     transform: translateX(-50%);
-    top: 70px;
+    top: 100px;
   }
 }
 
 .header-blog__desc {
   color: #fff;
+  font-family: 'robotoregular', sans-serif;
+  font-size: 16px;
 }
 
 .blog-main {
@@ -75,8 +77,9 @@
 .chapter__item {
   color: #90988d;
   margin-bottom: 40px;
-  font-family: 'robotomedium', sans-serif;
+  font-family: 'robotobold', sans-serif;
   position: relative;
+  font-size: 16px;
 
   &_active {
     color: #479132;
@@ -108,14 +111,17 @@
 
 .article__name {
   color: #55655a;
-  font-family: 'robotomedium', sans-serif;
-  font-size: 30px;
+  font-family: 'sansus_webissimoregular', sans-serif;
+  font-size: 35px;
   margin-bottom: 25px;
+  font-weight: 300;
 }
 
 .article__date {
   color: #8da981;
   margin-bottom: 25px;
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
 }
 
 .article__img {
@@ -126,6 +132,7 @@
   max-height: 200px;
   overflow: auto;
   color: #90988d;
-  font-family: 'robotomedium', sans-serif;
+  font-family: 'robotoregular', sans-serif;
   margin-bottom: 25px;
+  font-size: 16px;
 }
