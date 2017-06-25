@@ -1,0 +1,116 @@
+extends ../_template
+
+block variables
+    - var title = 'Обо мне'
+
+block content
+    body
+        div(class="wrapper")
+            section(class='section header-about font-water')
+                //img(class='header-bg', src='assets/img/water.jpg')
+                div(class="header-about__title-svg")
+                    svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+                ul(class="soc soc_position_header-about")
+                    li(class="soc__item")
+                        a(class="soc__link", href="#")
+                            svg(class="soc__pic soc__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
+                    li(class="soc__item")
+                        a(class="soc__link", href="#")
+                            svg(class="soc__pic soc__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
+                    li(class="soc__item")
+                        a(class="soc__link", href="#")
+                            svg(class="soc__pic soc__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+                include ../common/burger
+                div(class="arrow-down")
+                    a(class='arrow-down__link' href="#")
+                        svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                div(class="container container_align_center container_horisontal_center")
+                    div(class="about__avatar about__avatar__position_relative")
+                        img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
+                    div(class="about__name about__name__position_relative") Фёдоров Максим
+                    div(class="about__description about__description__position_relative") личный сайт веб разработчика
+            section(class='section main-work')
+                svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
+                    polygon(class="triangle-left triangle_work-fill", points="0,0 0,186 500.8,186 500.8,75.5")
+                    polygon(class="triangle-right triangle_work-fill", points="1000,0 1000,186 500,186 500,75.5")
+                h1(class="main-work__title") мои работы
+                div(class="main-work__title-svg")
+                    svg(class="main-work__title-pic") <use xlink:href="assets/img/sprite.svg#works_header"></use>
+                div(class="main-work__left")
+                    .main-work__flex-center
+                        h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
+                        p(class="main-work__desc") HTML, CSS, JAVASCRIPT
+                        a(class="main-work__link-school" href="#")
+                            svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p(class="main-work__btn-text") Посмотреть сайт
+                div(class="main-work__right")
+                    .current-work
+                    .other-works
+                        .other-works__dowd
+                            .other-works__bg
+                                a(href="#").other-works__link
+                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                        .other-works__up
+                            .other-works__bg
+                                a(href="#").other-works__link
+                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+            section(class='work-about')
+                .bg-stones
+                    .leaf-1
+                    .leaf-2
+                    .leaf-3
+                h2(class="work-about__title") что обо мне говорят
+                    div(class="work-about__title-svg")
+                        svg(class="work-about__title-pic") <use xlink:href="assets/img/sprite.svg#about_header"></use>
+                .review
+                    ul.review__list
+                        li.review__item
+                            .person
+                                .person__pic.person__pic_dima
+                                .person__text Этот парень проходил обучение веб разработке не где-то, а в Loftschool! Два месяца только самых тяжелых испытаний и бессонных ночей!
+                                .person__name Ковальчук Дмитрий
+                                .person__value - основатель Loftschool
+                        li.review__item
+                            .person
+                                .person__pic.person__pic_vova
+                                .person__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузераз!
+                                .person__name Сабанцев Владимир
+                                .person__value - преподаватель
+                .contact-form
+                    h3.contact-form__title связаться со мной
+                    form(action="#").contact-form__form
+                        label(for="contact-form-name").contact-form__name-label
+                            input(type="text" placeholder="Имя").contact-form__name#contact-form-name
+                        label(for="contact-form-email").contact-form__email-label
+                            input(type="text" placeholder="email").contact-form__name#contact-form-email
+                        label(for="contact-message").contact__message-label
+                            textarea(placeholder="Ваше сообщение").contact-form__message#contact-form-message
+                    .contact-form__buttons
+                        a(href="#").contact-form__btn Отправить
+                        a(href="#").contact-form__btn Очистить
+                    a(href="#").contact-form__link
+                        svg(class="contact-form__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+            section(class='footer-about')
+                div(class="footer-about__content")
+                    div(class="footer-about__section")
+                        p(class="footer-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                    div(class="footer-about__section")
+                        a(class="footer-about_link") Мои работы
+                        a(class="footer-about_link") Обо мне
+                        a(class="footer-about_link") Блог
+                        a(class="footer-about_link") Авторизация
+                        ul(class="soc soc_align_left soc_margin_top")
+                            li(class="soc__item-about")
+                                a(class="soc__link", href="#")
+                                    svg(class="soc__pic-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
+                            li(class="soc__item-about")
+                                a(class="soc__link", href="#")
+                                    svg(class="soc__pic-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
+                            li(class="soc__item-about")
+                                a(class="soc__link", href="#")
+                                    svg(class="soc__pic-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+                    div(class="footer-about__section")
+                        p(class="footer-about__text") Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
+                        p(class="footer-about__author") - Martin Golding
+                div(class="footer-about__container")
+                    include ../common/footer-owner
