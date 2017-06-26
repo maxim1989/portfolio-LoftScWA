@@ -1,5 +1,9 @@
 extends ../_template
 
+include ../mixins/technology
+include ../mixins/footer-main
+
+
 block variables
   - var title = 'Обо мне'
 
@@ -10,22 +14,22 @@ block content
         //img(class='header-bg', src='assets/img/water.jpg')
         div(class="header-about__title-svg")
           svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
-        ul(class="soc soc_position_header-about")
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-          li(class="soc__item")
-            a(class="soc__link", href="#")
-              svg(class="soc__pic soc__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
+        ul(class="social social_position_header-about")
+          li(class="social__item")
+            a(class="social__link", href="#")
+              svg(class="social__pic social__pic_vk social__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
+          li(class="social__item")
+            a(class="social__link", href="#")
+              svg(class="social__pic social__pic_github social__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
+          li(class="social__item")
+            a(class="social__link", href="#")
+              svg(class="social__pic social__pic_in social__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
         include ../common/burger
         div(class="arrow-down")
           a(class='arrow-down__link' href="#")
             svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
         div(class="container container_align_center container_horisontal_center")
-          div(class="about__avatar about__avatar__position_relative")
+          div(class="about__avatar")
             img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
           div(class="about__name about__name__position_relative") Фёдоров Максим
           div(class="about__description about__description__position_relative") личный сайт веб разработчика
@@ -51,60 +55,20 @@ block content
             ul(class="technology-type")
               li(class="technology-type__item") Frontend
                 ul(class="technology")
-                  li(class="technology__item")
-                    p(class="technology__name") HTML5
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#74a264" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-1" transform="rotate(-123 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") CSS3
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#74a264" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-2" transform="rotate(-153 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") JavaScript & jQuery
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#74a264" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-3" transform="rotate(-153 70 70)" )
+                  +knoledge("circle-1", "#74a264", "rotate(-123 70 70)", "HTML5")
+                  +knoledge("circle-2", "#74a264", "rotate(-153 70 70)", "CSS3")
+                  +knoledge("circle-3", "#74a264", "rotate(-153 70 70)", "JavaScript & jQuery")
               li(class="technology-type__item") Backend
                 ul(class="technology")
-                  li(class="technology__item")
-                    p(class="technology__name") PHP
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#b2c2a5" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-4" transform="rotate(60 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") MySQL
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#a0b991" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-5" transform="rotate(118 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") Node.js & npm
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#b2c2a5" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-6" transform="rotate(30 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") Mongo.db
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#9bb68b" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-7" transform="rotate(152 70 70)" )
+                  +knoledge("circle-4", "#b2c2a5", "rotate(60 70 70)", "PHP")
+                  +knoledge("circle-5", "#a0b991", "rotate(118 70 70)", "MySQL")
+                  +knoledge("circle-6", "#b2c2a5", "rotate(30 70 70)", "Node.js & npm")
+                  +knoledge("circle-7", "#9bb68b", "rotate(152 70 70)", "Mongo.db")
               li(class="technology-type__item") WorkFlow
                 ul(class="technology")
-                  li(class="technology__item")
-                    p(class="technology__name") Git
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#78a165" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-8" transform="rotate(-153 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") Gulp
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#8aac7a" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-9" transform="rotate(152 70 70)" )
-                  li(class="technology__item")
-                    p(class="technology__name") Bower
-                    svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
-                      circle(r="55" cx="70" cy="70" stroke="#9cb78c" fill="none")
-                      circle(r="55" cx="70" cy="70" stroke="#ccc" class="circle-10" transform="rotate(152 70 70)" )
+                  +knoledge("circle-8", "#78a165", "rotate(-153 70 70)", "Git")
+                  +knoledge("circle-9", "#8aac7a", "rotate(152 70 70)", "Gulp")
+                  +knoledge("circle-9", "#9cb78c", "rotate(152 70 70)", "Bower")
       section(class='section map')
         div(class="contact")
           h3(class="contact__title") контакты
@@ -129,27 +93,4 @@ block content
                 div(class="contacts__pic")
                   svg(class="contacts__svg" width="24px" height="21.654px") <use xlink:href="assets/img/sprite.svg#map_marker"></use>
                 div(class="contacts__text") Новосиборск, ул. Инская, д. 4
-      section(class='footer-about')
-        div(class="footer-about__content")
-          div(class="footer-about__section")
-            p(class="footer-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-          div(class="footer-about__section")
-            a(class="footer-about_link") Мои работы
-            a(class="footer-about_link") Обо мне
-            a(class="footer-about_link") Блог
-            a(class="footer-about_link") Авторизация
-            ul(class="soc soc_align_left soc_margin_top")
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-              li(class="soc__item-about")
-                a(class="soc__link", href="#")
-                  svg(class="soc__pic-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-          div(class="footer-about__section")
-            p(class="footer-about__text") Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
-            p(class="footer-about__author") - Martin Golding
-        div(class="footer-about__container")
-          include ../common/footer-owner
+      +footer-main
