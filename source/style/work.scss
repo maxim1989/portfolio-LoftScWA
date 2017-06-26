@@ -247,17 +247,17 @@
   height: 165px;
 }
 
-.reviewer {
+.review {
   position: relative;
   margin-bottom: 70px;
 }
 
-.reviewer__list {
+.review__list {
   display: flex;
   justify-content: center;
 }
 
-.reviewer__item {
+.review__item {
   width: 30%;
   margin-right: 10px;
   &:last-child {
@@ -265,13 +265,13 @@
   }
 }
 
-.person {
+.reviewer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.person__pic {
+.reviewer__pic {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -279,32 +279,32 @@
   margin-bottom: 20px;
 }
 
-.person__pic_dima {
+.reviewer__pic_dima {
   background-image: url("../img/dima.jpg");
 }
 
-.person__pic_vova {
+.reviewer__pic_vova {
   background-image: url("../img/vova.jpg");
 }
 
-.person__text {
+.reviewer__text {
   margin-bottom: 20px;
   width: 100%;
   color: #5d5a55;
 }
 
-.person__text,
-.person__value {
+.reviewer__text,
+.reviewer__value {
   font-size: 16px;
   font-family: 'robotoitalic', sans-serif;
 }
 
-.person__name {
+.reviewer__name {
   color: #4e8839;
   font-family: 'robotobold_italic', sans-serif;
 }
 
-.person__value {
+.reviewer__value {
   color: #5d5a55;
 }
 
