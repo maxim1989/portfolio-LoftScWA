@@ -35,13 +35,17 @@
 
 .main-work__title-pic {
   fill: #eef4e1;
-  width: 505.101px;
-  height: 165.036px;
+  width: 505px;
+  height: 165px;
+}
+
+.main-work__content {
+  display: flex;
+  height: 100%;
 }
 
 .main-work__left,
 .main-work__right {
-  float: left;
   width: 50%;
   margin-top: 25px;
   height: 88%;
@@ -101,8 +105,8 @@
 }
 
 .main-work__link {
-  width: 19.125px;
-  height: 19.125px;
+  width: 19px;
+  height: 19px;
   fill: #fff;
 }
 
@@ -135,7 +139,7 @@
   bottom: 0;
 }
 
-.other-works__dowd {
+.other-works__down {
   background-image: url("../img/work-4.png");
   width: 50%;
   height: 100%;
@@ -155,8 +159,8 @@
 }
 
 .other-works__arrow {
-  width: 42.736px;
-  height: 27.435px;
+  width: 42px;
+  height: 27px;
   fill: #fff;
   position: absolute;
   top: 50%;
@@ -239,21 +243,21 @@
 
 .work-about__title-pic {
   fill: #eef4e1;
-  width: 505.101px;
-  height: 165.036px;
+  width: 505px;
+  height: 165px;
 }
 
-.review {
+.reviewer {
   position: relative;
   margin-bottom: 70px;
 }
 
-.review__list {
+.reviewer__list {
   display: flex;
   justify-content: center;
 }
 
-.review__item {
+.reviewer__item {
   width: 30%;
   margin-right: 10px;
   &:last-child {

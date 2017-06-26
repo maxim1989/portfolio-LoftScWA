@@ -36,24 +36,25 @@ block content
                 h1(class="main-work__title") мои работы
                 div(class="main-work__title-svg")
                     svg(class="main-work__title-pic") <use xlink:href="assets/img/sprite.svg#works_header"></use>
-                div(class="main-work__left")
-                    .main-work__flex-center
-                        h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
-                        p(class="main-work__desc") HTML, CSS, JAVASCRIPT
-                        a(class="main-work__link-school" href="#")
-                            svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
-                            p(class="main-work__btn-text") Посмотреть сайт
-                div(class="main-work__right")
-                    .current-work
-                    .other-works
-                        .other-works__dowd
-                            .other-works__bg
-                                a(href="#").other-works__link
-                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                        .other-works__up
-                            .other-works__bg
-                                a(href="#").other-works__link
-                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                div.main-work__content
+                    div(class="main-work__left")
+                        .main-work__flex-center
+                            h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
+                            p(class="main-work__desc") HTML, CSS, JAVASCRIPT
+                            a(class="main-work__link-school" href="#")
+                                svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
+                                p(class="main-work__btn-text") Посмотреть сайт
+                    div(class="main-work__right")
+                        .current-work
+                        .other-works
+                            .other-works__down
+                                .other-works__bg
+                                    a(href="#").other-works__link
+                                        svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                            .other-works__up
+                                .other-works__bg
+                                    a(href="#").other-works__link
+                                        svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
             section(class='work-about')
                 .bg-stones
                     .leaf-1
@@ -62,17 +63,19 @@ block content
                 h2(class="work-about__title") что обо мне говорят
                     div(class="work-about__title-svg")
                         svg(class="work-about__title-pic") <use xlink:href="assets/img/sprite.svg#about_header"></use>
-                .review
-                    ul.review__list
-                        li.review__item
+                .reviewer
+                    ul.reviewer__list
+                        li.reviewer__item
                             .person
-                                .person__pic.person__pic_dima
+                                .person__pic
+                                    img(src="assets/img/dima.jpg").person__pic_dima
                                 .person__text Этот парень проходил обучение веб разработке не где-то, а в Loftschool! Два месяца только самых тяжелых испытаний и бессонных ночей!
                                 .person__name Ковальчук Дмитрий
                                 .person__value - основатель Loftschool
-                        li.review__item
+                        li.reviewer__item
                             .person
-                                .person__pic.person__pic_vova
+                                .person__pic
+                                    img(src="assets/img/vova.jpg").person__pic_vova
                                 .person__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузераз!
                                 .person__name Сабанцев Владимир
                                 .person__value - преподаватель
