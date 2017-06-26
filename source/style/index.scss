@@ -1,3 +1,7 @@
+.wrapper_height_screen {
+  height: 100vh;
+}
+
 .font-water {
   background-size: cover;
   background-image: url("../img/water.jpg");
@@ -126,11 +130,11 @@
   bottom: 40px;
   right: 0;
   left: 0;
-  color: #fff;
 }
 
 .owner {
   font-size: 16px;
   font-family: 'robotoregular', sans-serif;
+  color: #fff;
   text-align: center;
 }

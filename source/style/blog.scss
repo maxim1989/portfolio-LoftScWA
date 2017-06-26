@@ -15,7 +15,7 @@
   height: 208.012px;
 }
 
-.about__avatar_margin_botton {
+.about__avatar_margin_bottom {
   margin-bottom: 20px;
 }
 
@@ -47,7 +47,7 @@
 .blog-main {
   background-color: #fbf8f1;
   padding-bottom: 300px;
-  @extend %clearfix;
+  display: flex;
 }
 
 .triangle_fill_white {
@@ -57,7 +57,6 @@
 .blog-main__left,
 .blog-main__right{
   position: relative;
-  float: left;
 }
 
 .blog-main__left {
