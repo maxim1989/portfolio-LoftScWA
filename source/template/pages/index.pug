@@ -4,34 +4,34 @@ block variables
   - var title = 'Страница приветствия'
 
 block content
-  body(class='font-water')
-    div(class="wrapper")
-      section(class="header")
-        div(class="container container-align container_padding_right container_padding_top")
-          a(class="header__auth", href="#") авторизироваться
+  body.font-water
+    .wrapper
+      section.header
+        .container.container-align.container_padding_right.container_padding_top
+          a(href="#").header__auth авторизироваться
 
-      section(class="about")
-        div(class="container container_width")
-          div(class="about__content about__content_padding_bottom")
-            div(class="about__avatar")
-              img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-            div(class="about__name") Фёдоров Максим
-            div(class="about__description about__description_margin_bottom") личный сайт веб разработчика
-            ul(class="soc")
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-              li(class="soc__item")
-                a(class="soc__link", href="#")
-                  svg(class="soc_pic" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-            div(class="buttons")
-              a(class="buttons__link", href='#') мои работы
-              a(class="buttons__link", href='#') обо мне
-              a(class="buttons__link", href='#') блог
+      section.about
+        .container.container_width
+          .about__content.about__content_padding_bottom
+            .about__avatar
+              img(src='assets/img/avatar.jpg', alt='Avatar').about__pic
+            .about__name Фёдоров Максим
+            .about__description.about__description_margin_bottom личный сайт веб разработчика
+            ul.social
+              li.social__item
+                a(href="#").social__link
+                  svg.social_pic.social_pic_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
+              li.social__item
+                a(href="#").social__link
+                  svg.social_pic.soc_pic_github <use xlink:href="assets/img/sprite.svg#github"></use>
+              li.social__item
+                a(href="#").social__link
+                  svg.social_pic.soc_pic_in <use xlink:href="assets/img/sprite.svg#in"></use>
+            .buttons
+              a(href='#').buttons__link мои работы
+              a(href='#').buttons__link обо мне
+              a(href='#').buttons__link блог
 
-      section(class="footer")
-        div(class="container")
+      section.footer
+        .container
           include ../common/footer-owner

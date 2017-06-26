@@ -94,22 +94,37 @@
   width: 380px;
 }
 
-.soc {
+.social {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.soc__item {
+.social__item {
   margin-right: 15px;
   margin-left: 15px;
 }
 
-.soc_pic {
+.social_pic {
   fill: #8c9895;
   &:hover {
     fill: #4e8839;
   }
+}
+
+.social_pic_vk {
+  width: 32px;
+  height: 20px;
+}
+
+.soc_pic_github {
+  width: 30px;
+  height: 24px;
+}
+
+.soc_pic_in {
+  width: 25px;
+  height: 23px;
 }
 
 .buttons {
