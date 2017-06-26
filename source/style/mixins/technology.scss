@@ -1,0 +1,81 @@
+.technology__item {
+  margin-right: 35px;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.circle {
+  fill: none;
+  stroke-width: 20;
+}
+.circle-1 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 315;
+  transition: all 1s;
+}
+
+.circle-2 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 287;
+  transition: all 1s;
+}
+
+.circle-3 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 287;
+  transition: all 1s;
+}
+
+.circle-4 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 145;
+  transition: all 1s;
+}
+
+.circle-5 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 201;
+  transition: all 1s;
+}
+
+.circle-6 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 114;
+  transition: all 1s;
+}
+
+.circle-7 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 232;
+  transition: all 1s;
+}
+
+.circle-8 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 287;
+  transition: all 1s;
+}
+
+.circle-9 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 232;
+  transition: all 1s;
+}
+
+.circle-10 {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 232;
+  transition: all 1s;
+}
+
+.technology__name {
+  font-size: 15px;
+  width: 64px;
+  position: absolute;
+  top: 59px;
+  left: 38px;
+  text-align: center;
+  color: #78a165;
+}
