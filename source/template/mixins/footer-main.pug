@@ -1,25 +1,25 @@
 mixin footer-main
-    section(class='footer-about')
-        div(class="footer-about__content")
-            div(class="footer-about__section")
-                p(class="footer-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-            div(class="footer-about__section")
-                a(class="footer-about_link") Мои работы
-                a(class="footer-about_link") Обо мне
-                a(class="footer-about_link") Блог
-                a(class="footer-about_link") Авторизация
-                ul(class="social soc_align_left soc_margin_top")
-                    li(class="soc__item-about")
-                        a(class="soc__link", href="#")
-                            svg(class="soc__pic-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-                    li(class="soc__item-about")
-                        a(class="soc__link", href="#")
-                            svg(class="soc__pic-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-                    li(class="soc__item-about")
-                        a(class="soc__link", href="#")
-                            svg(class="soc__pic-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-            div(class="footer-about__section")
-                p(class="footer-about__text") Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
-                p(class="footer-about__author") - Martin Golding
-        div(class="footer-about__container")
+    footer.footer-about
+        .footer-about__content
+            .footer-about__section
+                p.footer-about__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+            .footer-about__section
+                a(href="#").footer-about_link Мои работы
+                a(href="#").footer-about_link Обо мне
+                a(href="#").footer-about_link Блог
+                a(href="#").footer-about_link Авторизация
+                ul.social.social_align_left.social_margin_top
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_github <use xlink:href="assets/img/sprite.svg#github"></use>
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_in <use xlink:href="assets/img/sprite.svg#in"></use>
+            .footer-about__section
+                p.footer-about__text Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
+                p.footer-about__author - Martin Golding
+        .footer-about__container
             include ../common/footer-owner

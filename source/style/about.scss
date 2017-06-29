@@ -1,52 +1,83 @@
-.header-about {
+.wrapper-about {
   position: relative;
 }
 
-.header-bg {
-  width: 4000px;
-  position: absolute;
+.header-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-about__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0 0;
+  margin-bottom: -20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-about__title-svg {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
+}
+
+.header-about__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-about__svg {
+  fill: rgba(52, 74, 71, .5);
+  width: 1175px;
+  height: 313px;
+}
+
+.header-about__avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .header-about__pic {
-  fill: rgba(52, 74, 71, .5);
-  width: 1175.495px;
-  height: 313.961px;
+  width: 140px;
+  height: 140px;
+  vertical-align: middle;
 }
 
-.social_position_header-about {
-  position: absolute;
-  top: 30px;
-  left: 20px;
+.header-about__name {
+  font-size: 35px;
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+}
+
+.header-about__description {
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  color: #fff;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .social__pic_fill_header-about {
   fill: #fff;
 }
 
-.container_align_center {
-  text-align: center;
-}
-
-.container_horisontal_center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .arrow-down {
+  display: block;
   position: absolute;
-  bottom: 90px;
+  bottom: 220px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  padding: 20px;
 }
 
 .arrow-down__pic{
@@ -55,15 +86,8 @@
   height: 27.435px;
 }
 
-.main-about {
-  position: relative;
-  @extend %clearfix;
-}
-
 .triangle {
   width:100%;
-  position: absolute;
-  top: -144px;
 }
 
 .triangle-right {
@@ -74,12 +98,15 @@
   fill: #ebefe1;
 }
 
+.main-about {
+  display: flex;
+}
+
 .main-about__left,
 .main-about__right {
-  float: left;
   width: 50%;
   position: relative;
-  height: 100%;
+  min-height: 100%;
 }
 
 .main-about__left {
@@ -98,9 +125,10 @@
 }
 
 .main-about__container {
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .main-about__title {
@@ -108,7 +136,7 @@
   font-size: 44px;
   text-align: center;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   &:after {
     content: '';
     display: block;
@@ -118,28 +146,21 @@
     background-color: black;
     left: 50%;
     transform: translateX(-50%);
-    top: 70px;
+    top: 80px;
   }
 }
 
 .main-about__avatar {
   width: 390px;
   height: 390px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   margin-bottom: 40px;
 }
 
 .main-about__desc {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   color: #5e655d;
-}
-
-.main-about__desc_margin_bottom {
-  margin-bottom: 50px;
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
 }
 
 .main-about__me {
@@ -164,10 +185,7 @@
 }
 
 .main-about__content {
-  width: 400px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 85%;
 }
 
 .main-about__right {
@@ -183,8 +201,6 @@
   color: #546056;
   margin-bottom: 50px;
   text-transform: uppercase;
-  left: 50%;
-  transform: translateX(-50%);
   &:after {
     content: '';
     display: block;
@@ -198,6 +214,12 @@
   }
 }
 
+.technology-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .technology-type__item {
   font-family: 'robotomedium', sans-serif;
   font-size: 22px;
@@ -209,6 +231,7 @@
   display: flex;
   justify-content: flex-start;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .map {
@@ -274,6 +297,26 @@
 
 .contacts__svg {
   fill: #6f9c63;
+}
+
+.contacts__svg_sk {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__svg_mail {
+  width:24px;
+  height: 17px;
+}
+
+.contacts__svg_phone {
+  width: 24px;
+  height: 18px;
+}
+
+.contacts__svg_address {
+  width: 24px;
+  height: 21px;
 }
 
 .contacts__text {
