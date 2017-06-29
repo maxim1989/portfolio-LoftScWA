@@ -2,11 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .social__item {
-  margin-right: 15px;
-  margin-left: 15px;
+  margin: 0 15px;
+}
+
+.social__link {
+  display: block;
+  padding: 5px;
 }
 
 .social__pic {
