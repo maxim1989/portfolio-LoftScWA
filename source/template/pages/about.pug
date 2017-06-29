@@ -9,88 +9,88 @@ block variables
 
 block content
   body
-    div(class="wrapper")
-      section(class='section header-about font-water')
-        //img(class='header-bg', src='assets/img/water.jpg')
-        div(class="header-about__title-svg")
-          svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
-        div(class="soc_position_header-about")
-        ul(class="social social_position_header-about")
-          li(class="social__item")
-            a(class="social__link", href="#")
-              svg(class="social__pic social__pic_vk social__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-          li(class="social__item")
-            a(class="social__link", href="#")
-              svg(class="social__pic social__pic_github social__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-          li(class="social__item")
-            a(class="social__link", href="#")
-              svg(class="social__pic social__pic_in social__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-        include ../common/burger
-        div(class="arrow-down")
-          svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-        div(class="container container_align_center container_horisontal_center")
-          div(class="about__avatar")
-            img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-          div(class="about__name about__name__position_relative") Фёдоров Максим
-          div(class="about__description about__description__position_relative") личный сайт веб разработчика
-      section(class='section main-about')
-        svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
-          polygon(class="triangle-left", points="0,0 0,186 500.8,186 500.8,75.5")
-          polygon(class="triangle-right", points="1000,0 1000,186 500,186 500,75.5")
-        div(class="main-about__left")
-          div(class="main-about__title-svg")
-            svg(class="main-about__pic") <use xlink:href="assets/img/sprite.svg#about_header"></use>
-          div(class="main-about__container")
-            h1(class="main-about__title") ОБО МНЕ
-            div(class="main-about__avatar")
-              img(class='main-about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-            h3(class="main-about__me") КТО Я
-            div(class="main-about__content")
-              p(class="main-about__desc") Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              p(class="main-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        div(class="main-about__right")
-          div(class="main-about__container")
-            h3(class="main-about__can-do") чем я могу быть вам полезен
-            p(class="main-about__desc main-about__desc_margin_bottom") Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            ul(class="technology-type")
-              li(class="technology-type__item") Frontend
-                ul(class="technology")
-                  +knoledge("circle-1", "#74a264", "rotate(-123 70 70)", "HTML5")
-                  +knoledge("circle-2", "#74a264", "rotate(-153 70 70)", "CSS3")
-                  +knoledge("circle-3", "#74a264", "rotate(-153 70 70)", "JavaScript & jQuery")
-              li(class="technology-type__item") Backend
-                ul(class="technology")
-                  +knoledge("circle-4", "#b2c2a5", "rotate(60 70 70)", "PHP")
-                  +knoledge("circle-5", "#a0b991", "rotate(118 70 70)", "MySQL")
-                  +knoledge("circle-6", "#b2c2a5", "rotate(30 70 70)", "Node.js & npm")
-                  +knoledge("circle-7", "#9bb68b", "rotate(152 70 70)", "Mongo.db")
-              li(class="technology-type__item") WorkFlow
-                ul(class="technology")
-                  +knoledge("circle-8", "#78a165", "rotate(-153 70 70)", "Git")
-                  +knoledge("circle-9", "#8aac7a", "rotate(152 70 70)", "Gulp")
-                  +knoledge("circle-9", "#9cb78c", "rotate(152 70 70)", "Bower")
-      section(class='section map')
-        div(class="contact")
-          h3(class="contact__title") контакты
-          ul(class="contacts__list")
-            li(class="contacts__item")
-              a(class="contacts__link" href="#")
-                div(class="contacts__pic")
-                  svg(class="contacts__svg" width="24px" height="24px") <use xlink:href="assets/img/sprite.svg#skype"></use>
-                div(class="contacts__text") skype_kdn
-            li(class="contacts__item")
-              a(class="contacts__link" href="#")
-                div(class="contacts__pic")
-                  svg(class="contacts__svg" width="24px" height="17.295px") <use xlink:href="assets/img/sprite.svg#envelope"></use>
-                div(class="contacts__text") astahov@gmail.com
-            li(class="contacts__item")
-              a(class="contacts__link" href="#")
-                div(class="contacts__pic")
-                  svg(class="contacts__svg" width="24px" height="18.863px") <use xlink:href="assets/img/sprite.svg#phone"></use>
-                div(class="contacts__text") +7 931 200 93 24
-            li(class="contacts__item")
-              a(class="contacts__link" href="#")
-                div(class="contacts__pic")
-                  svg(class="contacts__svg" width="24px" height="21.654px") <use xlink:href="assets/img/sprite.svg#map_marker"></use>
-                div(class="contacts__text") Новосиборск, ул. Инская, д. 4
+    .wrapper.wrapper-about
+      header.section.header-about.font-water
+        .header-about__top
+          ul.social
+            li.social__item
+              a(href="#").social__link
+                svg.social__pic.social__pic_vk.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#vk"></use>
+            li.social__item
+              a(href="#").social__link
+                svg.social__pic.social__pic_github.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#github"></use>
+            li.social__item
+              a(href="#").social__link
+                svg.social__pic.social__pic_in.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#in"></use>
+          include ../common/burger
+        .header-about__title-svg
+          svg.header-about__svg <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+        .header-about__main
+          .header-about__avatar
+            img(src='assets/img/avatar.jpg', alt='Avatar').header-about__pic
+          .header-about__name Фёдоров Максим
+          .header-about__description личный сайт веб разработчика
+        a.arrow-down
+          svg.arrow-down__pic <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+        svg(viewbox="0 0 1000 185", preserveaspectratio="none").triangle
+          polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left
+          polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right
+      section.main-about
+        .main-about__left
+          .main-about__title-svg
+            svg.main-about__pic <use xlink:href="assets/img/sprite.svg#about_header"></use>
+          .main-about__container
+            h1.main-about__title ОБО МНЕ
+            .main-about__avatar
+              img(src='assets/img/avatar.jpg', alt='Avatar').main-about__pic
+            h3.main-about__me КТО Я
+            .main-about__content
+              p.main-about__desc Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p.main-about__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .main-about__right
+          .main-about__container
+            h3.main-about__can-do чем я могу быть вам полезен
+            .main-about__content
+              p.main-about__desc Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+              ul.technology-type
+                li.technology-type__item Frontend
+                  ul.technology
+                    +knoledge("circle-1", "#74a264", "rotate(-123 70 70)", "HTML5")
+                    +knoledge("circle-2", "#74a264", "rotate(-153 70 70)", "CSS3")
+                    +knoledge("circle-3", "#74a264", "rotate(-153 70 70)", "JavaScript & jQuery")
+                li.technology-type__item Backend
+                  ul.technology
+                    +knoledge("circle-4", "#b2c2a5", "rotate(60 70 70)", "PHP")
+                    +knoledge("circle-5", "#a0b991", "rotate(118 70 70)", "MySQL")
+                    +knoledge("circle-6", "#b2c2a5", "rotate(30 70 70)", "Node.js & npm")
+                    +knoledge("circle-7", "#9bb68b", "rotate(152 70 70)", "Mongo.db")
+                li.technology-type__item WorkFlow
+                  ul.technology
+                    +knoledge("circle-8", "#78a165", "rotate(-153 70 70)", "Git")
+                    +knoledge("circle-9", "#8aac7a", "rotate(152 70 70)", "Gulp")
+                    +knoledge("circle-9", "#9cb78c", "rotate(152 70 70)", "Bower")
+      section.section.map
+        .contact
+          h3.contact__title контакты
+          ul.contacts__list
+            li.contacts__item
+              a(href="#").contacts__link
+                .contacts__pic
+                  svg.contacts__svg.contacts__svg_sk <use xlink:href="assets/img/sprite.svg#skype"></use>
+                .contacts__text skype_kdn
+            li.contacts__item
+              a(href="#").contacts__link
+                .contacts__pic
+                  svg.contacts__svg.contacts__svg_mail <use xlink:href="assets/img/sprite.svg#envelope"></use>
+                .contacts__text astahov@gmail.com
+            li.contacts__item
+              a(href="#").contacts__link
+                .contacts__pic
+                  svg.contacts__svg.contacts__svg_phone <use xlink:href="assets/img/sprite.svg#phone"></use>
+                .contacts__text +7 931 200 93 24
+            li.contacts__item
+              a(href="#").contacts__link
+                .contacts__pic
+                  svg.contacts__svg.contacts__svg_address <use xlink:href="assets/img/sprite.svg#map_marker"></use>
+                .contacts__text Новосиборск, ул. Инская, д. 4
       +footer-main

@@ -64,6 +64,13 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.font-water {
+  background-size: cover;
+  background-image: url("../img/water.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 @import "font";
 @import "components/soc";
 @import "components/burger";
