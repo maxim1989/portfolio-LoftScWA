@@ -5,33 +5,30 @@ block variables
 
 block content
   body.font-water
-    .wrapper
-      section.header
-        .container.container-align.container_padding_right.container_padding_top
-          a(href="#").header__auth авторизироваться
+    .wrapper-hello
+      header.header-hello
+        a(href="#").header-hello__auth
+          span.header-hello__auth-btn Авторизироваться
 
-      section.about
-        .container.container_width
-          .about__content.about__content_padding_bottom
-            .about__avatar
-              img(src='assets/img/avatar.jpg', alt='Avatar').about__pic
-            .about__name Фёдоров Максим
-            .about__description.about__description_margin_bottom личный сайт веб разработчика
-            ul.social
-              li.social__item
-                a(href="#").social__link
-                  svg.social_pic.social_pic_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
-              li.social__item
-                a(href="#").social__link
-                  svg.social_pic.soc_pic_github <use xlink:href="assets/img/sprite.svg#github"></use>
-              li.social__item
-                a(href="#").social__link
-                  svg.social_pic.soc_pic_in <use xlink:href="assets/img/sprite.svg#in"></use>
-            .buttons
-              a(href='#').buttons__link мои работы
-              a(href='#').buttons__link обо мне
-              a(href='#').buttons__link блог
+      section.main-hello
+        .main-hello__avatar
+          img(src='assets/img/avatar.jpg', alt='Avatar').main-hello__pic
+        .main-hello__name Фёдоров Максим
+        .main-hello__description личный сайт веб разработчика
+        ul.social
+          li.social__item
+            a(href="#").social__link
+              svg.social__pic.social__pic_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
+          li.social__item
+            a(href="#").social__link
+              svg.social__pic.social__pic_github <use xlink:href="assets/img/sprite.svg#github"></use>
+          li.social__item
+            a(href="#").social__link
+              svg.social__pic.social__pic_in <use xlink:href="assets/img/sprite.svg#in"></use>
+        .buttons
+          a(href='#').buttons__link мои работы
+          a(href='#').buttons__link обо мне
+          a(href='#').buttons__link блог
 
-      section.footer
-        .container
+      footer.footer
           include ../common/footer-owner
