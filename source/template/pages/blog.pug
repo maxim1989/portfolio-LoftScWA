@@ -1,24 +1,25 @@
 extends ../_template
 
+include ../mixins/footer-main
+
 block variables
     - var title = 'Блог'
 
 block content
     body
-        div(class="wrapper")
-            section(class='section header-about font-water')
-                //img(class='header-bg', src='assets/img/water.jpg')
-                div(class="header-blog__title-svg")
-                    svg(class="header-blog__pic") <use xlink:href="assets/img/sprite.svg#blog_header"></use>
-                div(class="container container_align_center container_horisontal_center")
-                    div(class="about__avatar about__avatar__position_relative about__avatar_margin_bottom")
-                        img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-                    h1(class="header-blog__title") блог
-                    p(class="header-blog__desc") Статьи, которые я написал
+        div.wrapper.wrapper-blog
+            header.section.header-blog.font-water
+                .header-blog__title-svg
+                    svg.header-blog__pic <use xlink:href="assets/img/sprite.svg#blog_header"></use>
+                .header-blog__content
+                    .header-blog__avatar
+                        img(src='assets/img/avatar.jpg', alt='Avatar').header-blog__img
+                    h1.header-blog__title блог
+                    p.header-blog__desc Статьи, которые я написал
+                svg(viewbox="0 0 1000 185", preserveaspectratio="none").triangle
+                    polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left.triangle_fill_white
+                    polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right.triangle_fill_white
             section(class="blog-main")
-                svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
-                    polygon(class="triangle-left triangle_fill_white", points="0,0 0,186 500.8,186 500.8,75.5")
-                    polygon(class="triangle-right triangle_fill_white", points="1000,0 1000,186 500,186 500,75.5")
                 div(class="blog-main__left")
                     ul.chapter
                         li.chapter__item.chapter__item_active
@@ -45,27 +46,4 @@ block content
                             .article__text
                                 p Начнем с теории — и сразу оговоримся, что будем давать ее в очень упрощенном виде, иначе статья вырастет до совсем уж неприличных размеров. Блокчейн — по сути огромная база данных, которая одновременно хранится на тысячах компьютеров по всему миру. В случае с электронными деньгами в блокчейне размещена информация обо всех операциях, которые когда-либо происходили с этой валютой — кто, когда, кому и сколько перевел. Считается, что взломать организованную таким образом базу данных, или даже просто несанкционированно извлечь из нее данные, очень сложно — ведь для этого надо получить доступ к тысячам компьютеров одновременно.
                                 p Изобретателем блокчейна считается некто под псевдонимом Сатоси Накамото (не исключено, что это группа людей — реальная личность Сатоси так и не раскрыта), который в 2009 году запустил цифровую валюту биткоин. Вслед за Сатоси были созданы сотни аналогов биткоина. Кроме того, технология блокчейна не ограничивается цифровыми деньгами — таким образом можно организовать любую цифровую базу данных, вплоть до результатов выборов или реестра земельных участков.
-            section(class='footer-about')
-                div(class="footer-about__content")
-                    div(class="footer-about__section")
-                        p(class="footer-about__desc") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                    div(class="footer-about__section")
-                        a(class="footer-about_link") Мои работы
-                        a(class="footer-about_link") Обо мне
-                        a(class="footer-about_link") Блог
-                        a(class="footer-about_link") Авторизация
-                        ul(class="soc soc_align_left soc_margin_top")
-                            li(class="soc__item-about")
-                                a(class="soc__link", href="#")
-                                    svg(class="soc__pic-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-                            li(class="soc__item-about")
-                                a(class="soc__link", href="#")
-                                    svg(class="soc__pic-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-                            li(class="soc__item-about")
-                                a(class="soc__link", href="#")
-                                    svg(class="soc__pic-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-                    div(class="footer-about__section")
-                        p(class="footer-about__text") Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
-                        p(class="footer-about__author") - Martin Golding
-                div(class="footer-about__container")
-                    include ../common/footer-owner
+            +footer-main
