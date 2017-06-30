@@ -7,20 +7,19 @@ block variables
 
 block content
     body
-        div(class="wrapper")
-            section(class='section header-about font-water')
-                //img(class='header-bg', src='assets/img/water.jpg')
-                div(class="header-blog__title-svg")
-                    svg(class="header-blog__pic") <use xlink:href="assets/img/sprite.svg#blog_header"></use>
-                div(class="container container_align_center container_horisontal_center")
-                    div(class="about__avatar about__avatar__position_relative about__avatar_margin_bottom")
-                        img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-                    h1(class="header-blog__title") блог
-                    p(class="header-blog__desc") Статьи, которые я написал
+        div.wrapper.wrapper-blog
+            header.section.header-blog.font-water
+                .header-blog__title-svg
+                    svg.header-blog__pic <use xlink:href="assets/img/sprite.svg#blog_header"></use>
+                .header-blog__content
+                    .header-blog__avatar
+                        img(src='assets/img/avatar.jpg', alt='Avatar').header-blog__img
+                    h1.header-blog__title блог
+                    p.header-blog__desc Статьи, которые я написал
+                svg(viewbox="0 0 1000 185", preserveaspectratio="none").triangle
+                    polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left.triangle_fill_white
+                    polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right.triangle_fill_white
             section(class="blog-main")
-                svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
-                    polygon(class="triangle-left triangle_fill_white", points="0,0 0,186 500.8,186 500.8,75.5")
-                    polygon(class="triangle-right triangle_fill_white", points="1000,0 1000,186 500,186 500,75.5")
                 div(class="blog-main__left")
                     ul.chapter
                         li.chapter__item.chapter__item_active

@@ -7,56 +7,54 @@ block variables
 
 block content
     body
-        div(class="wrapper")
-            section(class='section header-about font-water')
-                //img(class='header-bg', src='assets/img/water.jpg')
-                div(class="header-about__title-svg")
-                    svg(class="header-about__pic") <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
-                ul(class="social social_position_header-about")
-                    li(class="social__item")
-                        a(class="social__link", href="#")
-                            svg(class="social__pic social__pic_fill_header-about", width='32px', height='20px') <use xlink:href="assets/img/sprite.svg#vk"></use>
-                    li(class="social__item")
-                        a(class="social__link", href="#")
-                            svg(class="social__pic social__pic_fill_header-about" width='30px' height='24px') <use xlink:href="assets/img/sprite.svg#github"></use>
-                    li(class="social__item")
-                        a(class="social__link", href="#")
-                            svg(class="social__pic social__pic_fill_header-about" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#in"></use>
-                include ../common/burger
-                div(class="arrow-down")
-                    a(class='arrow-down__link' href="#")
-                        svg(class="arrow-down__pic") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                div(class="container container_align_center container_horisontal_center")
-                    div(class="about__avatar about__avatar__position_relative")
-                        img(class='about__pic', src='assets/img/avatar.jpg', alt='Avatar')
-                    div(class="about__name about__name__position_relative") Фёдоров Максим
-                    div(class="about__description about__description__position_relative") личный сайт веб разработчика
-            section(class='section main-work')
-                svg(viewbox="0 0 1000 185", preserveaspectratio="none", class="triangle")
-                    polygon(class="triangle-left triangle_work-fill", points="0,0 0,186 500.8,186 500.8,75.5")
-                    polygon(class="triangle-right triangle_work-fill", points="1000,0 1000,186 500,186 500,75.5")
-                h1(class="main-work__title") мои работы
-                div(class="main-work__title-svg")
-                    svg(class="main-work__title-pic") <use xlink:href="assets/img/sprite.svg#works_header"></use>
+        .wrapper.wrapper-work
+            header.section.header-about.font-water
+                .header-about__top
+                    ul.social
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_vk.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#vk"></use>
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_github.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#github"></use>
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_in.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#in"></use>
+                    include ../common/burger
+                .header-about__title-svg
+                    svg.header-about__svg <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+                .header-about__main
+                    .header-about__avatar
+                        img(src='assets/img/avatar.jpg', alt='Avatar').header-about__pic
+                    .header-about__name Фёдоров Максим
+                    .header-about__description личный сайт веб разработчика
+                a.arrow-down
+                    svg.arrow-down__pic <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                svg(viewbox="0 0 1000 185", preserveaspectratio="none").triangle
+                    polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left.triangle-left_fill_white
+                    polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right.triangle-left_fill_white
+            section.section.main-work
+                h1.main-work__title мои работы
+                .main-work__title-svg
+                    svg.main-work__title-pic <use xlink:href="assets/img/sprite.svg#works_header"></use>
                 div.main-work__content
-                    div(class="main-work__left")
-                        .main-work__flex-center
-                            h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
-                            p(class="main-work__desc") HTML, CSS, JAVASCRIPT
-                            a(class="main-work__link-school" href="#")
-                                svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
-                                p(class="main-work__btn-text") Посмотреть сайт
-                    div(class="main-work__right")
-                        .current-work
-                        .other-works
-                            .other-works__down
-                                .other-works__bg
-                                    a(href="#").other-works__link
-                                        svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                            .other-works__up
-                                .other-works__bg
-                                    a(href="#").other-works__link
-                                        svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                    .current-work
+                        img(src='assets/img/work-1.png').current-work__pic
+                    .main-work__flex-center
+                        h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
+                        p(class="main-work__desc") HTML, CSS, JAVASCRIPT
+                        a(class="main-work__link-school" href="#")
+                            svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p(class="main-work__btn-text") Посмотреть сайт
+                    .other-works
+                        .other-works__down
+                            .other-works__bg
+                                a(href="#").other-works__link
+                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                        .other-works__up
+                            .other-works__bg
+                                a(href="#").other-works__link
+                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
             section(class='work-about')
                 .bg-stones
                     .leaf-1
