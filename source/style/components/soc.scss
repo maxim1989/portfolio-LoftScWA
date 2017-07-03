@@ -1,0 +1,37 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.social__item {
+  margin: 0 15px;
+}
+
+.social__link {
+  display: block;
+  padding: 5px;
+}
+
+.social__pic {
+  fill: #8c9895;
+  &:hover {
+    fill: #4e8839;
+  }
+}
+
+.social__pic_vk {
+  width: 32px;
+  height: 20px;
+}
+
+.social__pic_github {
+  width: 30px;
+  height: 24px;
+}
+
+.social__pic_in {
+  width: 25px;
+  height: 23px;
+}

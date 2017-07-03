@@ -1,0 +1,93 @@
+.footer-about__section {
+  width: 33.333333%;
+  box-sizing: border-box;
+  padding: 30px;
+  font-size: 18px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    top: 50%;
+    right: 0;
+    background-color: #69726f;
+    transform: translateY(-50%);
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.social_align_left {
+  justify-content: flex-start;
+}
+
+.social_margin_top {
+  margin-top: 15px;
+}
+
+.social__item-about {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer-about_link {
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+  margin-right: 15px;
+  font-size: 16px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer-about__desc {
+  font-family: 'robotomedium', sans-serif;
+  color: #e9eaec;
+  font-size: 16px;
+}
+
+.footer-about__content {
+  display: flex;
+  background-color: rgba(67, 78, 74, .5);
+}
+
+.social__pic-about {
+  fill: #8c9895;
+  &:hover {
+    fill: #fff;
+  }
+}
+
+.social__pic-about_vk {
+  width: 32px;
+  height: 20px;
+}
+
+.social__pic-about_github {
+  width: 30px;
+  height: 24px;
+}
+
+.social__pic-about_in {
+  width: 25px;
+  height: 23px;
+}
+
+.footer-about__text,
+.footer-about__author {
+  color: #b5b7b6;
+}
+
+.footer-about__container {
+  background-color: #80a971;
+  color: #e9eaec;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

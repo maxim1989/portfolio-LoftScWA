@@ -1,0 +1,25 @@
+mixin footer-main
+    footer.footer-about
+        .footer-about__content
+            .footer-about__section
+                p.footer-about__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+            .footer-about__section
+                a(href="#").footer-about_link Мои работы
+                a(href="#").footer-about_link Обо мне
+                a(href="#").footer-about_link Блог
+                a(href="#").footer-about_link Авторизация
+                ul.social.social_align_left.social_margin_top
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_github <use xlink:href="assets/img/sprite.svg#github"></use>
+                    li.social__item-about
+                        a(href="#").social__link
+                            svg.social__pic-about.social__pic-about_in <use xlink:href="assets/img/sprite.svg#in"></use>
+            .footer-about__section
+                p.footer-about__text Всегда пишите код так, будто сопровождать его будет, склонный к насилию психопат, который знает, где вы живёте.
+                p.footer-about__author - Martin Golding
+        .footer-about__container
+            include ../common/footer-owner

@@ -1,0 +1,6 @@
+mixin knoledge(cls, color, transform, name)
+    li.technology__item
+        p.technology__name= name
+        svg(viewport="0 0 135 135" width="135" height="135" class="circle" preserveaspectratio="none")
+            circle(r="55" cx="70" cy="70" stroke=color fill="none")
+            circle(r="55" cx="70" cy="70" stroke="#ccc" class=cls transform=transform )
