@@ -1,0 +1,157 @@
+.font-water {
+  background-size: cover;
+  background-image: url("../img/water.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.background {
+  position: absolute;
+  z-index: -5;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.wrapper-hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.header-hello {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 20px 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-hello__auth {
+  display: block;
+  padding: 15px 30px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+
+  &:hover {
+    background-color: #4e8839;
+    border-color: #4e8839;
+  }
+}
+
+.header-hello__auth-btn {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'robotomedium', sans-serif;
+}
+
+.main-hello {
+  background-color: rgba(18, 38, 32, .6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.main-hello__content_padding_bottom {
+  padding-bottom: 40px;
+}
+
+.main-hello__avatar {
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.main-hello__pic {
+  width: 140px;
+  height: 140px;
+  vertical-align: middle;
+}
+
+.main-hello__name {
+  font-size: 28px;
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+}
+
+.main-hello__description {
+  color: #d1d6d4;
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  margin-bottom: 30px;
+  &:first-letter{
+    text-transform: uppercase;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.social__item {
+  margin: 0 15px;
+}
+
+.social__link {
+  display: block;
+  padding: 5px;
+}
+
+.social__pic {
+  fill: #8c9895;
+  &:hover {
+    fill: #4e8839;
+  }
+}
+
+.social__pic_vk {
+  width: 32px;
+  height: 20px;
+}
+
+.social__pic_github {
+  width: 30px;
+  height: 24px;
+}
+
+.social__pic_in {
+  width: 25px;
+  height: 23px;
+}
+
+
+.buttons__link {
+  padding: 15px 30px;
+  display: inline-block;
+  background-color: #618f54;
+  font-family: 'robotomedium', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  &:first-letter{
+    text-transform: uppercase;
+  }
+  &:hover {
+    background-color: #4a8039;
+  }
+}
+
+.buttons__link + .buttons__link {
+  border-left: 2px solid #9fb99e;
+}
+
+.footer {
+  margin-bottom: 40px;
+}
+
+.owner {
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  color: #fff;
+  text-align: center;
+}
