@@ -20,7 +20,11 @@
   font-family: sansus_webissimoregular, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  z-index: 1;
+  z-index: 2;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
   &:after {
     content: '';
     display: block;
@@ -36,9 +40,10 @@
 
 .main-work__title-svg {
   position: absolute;
-  top: -50px;
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .main-work__title-pic {
@@ -53,22 +58,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: relative;
+  top: -89px;
 }
-
-//.main-work__left,
-//.main-work__right {
-//  width: 50%;
-//  margin-top: 25px;
-//  height: 88%;
-//  -webkit-box-sizing: border-box;
-//  -moz-box-sizing: border-box;
-//  box-sizing: border-box;
-//  position: relative;
-//}
-//
-//.main-work__left {
-//  background-color: #ebefe2;
-//}
 
 .main-work__flex-center {
   display: flex;
@@ -78,6 +70,7 @@
   height: 100%;
   order: -1;
   width: 50%;
+  background-color: #ebefe1;
 }
 
 .main-work__title_left {
@@ -91,13 +84,13 @@
   &:after {
     content: '';
     display: block;
-    position: absolute;
+    position: relative;
     width: 90px;
     height: 3px;
     background-color: #566358;
     left: 50%;
     transform: translateX(-50%);
-    top: 110px;
+    top: 15px;
   }
 }
 
@@ -135,7 +128,11 @@
 .current-work {
   width: 50%;
   text-align: center;
-  margin-bottom: 80px;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2e4d7;
 }
 
 .current-work__pic {
@@ -191,7 +188,8 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: 1920px;
+  background-repeat: no-repeat;
 }
 
 .leaf-1 {
@@ -320,16 +318,22 @@
   color: #5d5a55;
 }
 
-.contact-form {
+.blur-wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 380px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
-  background-color: rgba(218, 219, 214, .5);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: blur(1px);
+  background-image: url(../img/bg-work.png);
+  background-size: 1920px;
+  background-repeat: no-repeat;
 }
 
 .contact-form__title {
@@ -370,7 +374,6 @@
   margin-bottom: 20px;
 }
 
-.contact-form__name,
 .contact-form__name {
   width: 340px;
   height: 50px;

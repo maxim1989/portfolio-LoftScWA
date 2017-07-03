@@ -38,6 +38,7 @@
 }
 
 .footer-about_link {
+  display: inline-block;
   font-family: 'robotomedium', sans-serif;
   color: #fff;
   margin-right: 15px;
@@ -55,7 +56,7 @@
 
 .footer-about__content {
   display: flex;
-  background-color: rgba(67, 78, 74, .5);
+  background-color: rgba(57, 62, 66, 0.851);
 }
 
 .social__pic-about {

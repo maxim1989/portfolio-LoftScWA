@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    min-width: 286px;
+    min-height: 384px;
+  }
+
+  .main-hello {
+    width: 286px;
+    height: 384px;
+  }
+
+  .make-auth {
+    font-size: 30px;
+  }
+
+  .auth-form__name {
+    width: 260px;
+  }
+
+  .menu__item_width_half {
+    width: 39%;
+  }
+
+  .menu__item {
+    padding: 15px 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .wrapper-hello {
+    min-width: 320px;
+  }
+
+  .header-hello {
+    justify-content: center;
+  }
+
+  .main-hello__name {
+    font-size: 16px;
+  }
+}

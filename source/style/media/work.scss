@@ -1,0 +1,160 @@
+@media screen and (max-width: 768px) {
+  .main-work {
+    height: 140vh;
+  }
+
+  .main-work__title {
+    font-size: 47px;
+    top: -10px;
+
+    &:after {
+      top: 75px;
+    }
+  }
+
+  .main-work__title-svg {
+    top: -30px;
+  }
+
+  .main-work__title-pic {
+    width: 360px;
+    height: 100px;
+  }
+
+  .main-work__content {
+    flex-wrap: nowrap;
+  }
+
+  .current-work,
+  .main-work__flex-center,
+  .other-works {
+    width: 100%;
+  }
+
+  .current-work {
+    height: 60%;
+  }
+
+  .main-work__flex-center {
+    height: 20%;
+  }
+
+  .main-work__title_left {
+    width: 70%;
+  }
+
+  .other-works {
+    height: 20%;
+  }
+
+  .main-work__flex-center {
+    order: 0;
+  }
+
+  .main-work__title_left {
+    font-size: 30px;
+  }
+
+  .work-about__title {
+    font-size: 49px;
+    &:after {
+      top: 155px;
+    }
+  }
+
+  .work-about__title-pic {
+    width: 370px;
+    height: 160px;
+  }
+
+  .reviewer__text {
+    font-size: 14px;
+  }
+
+  .work-about {
+    padding-bottom: 500px;
+  }
+
+}
+
+@media screen and (max-width: 671px) {
+  .work-about__title:after {
+    top: 215px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .contact-form {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .contact-form__name {
+    width: 100%;
+  }
+
+  .contact-form__message {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-about__description {
+    font-size: 14px;
+  }
+
+  .main-work__title {
+    font-size: 35px;
+  }
+
+  .main-work__title_left {
+    font-size: 21px;
+  }
+
+  .main-work__desc {
+    font-size: 14px;
+  }
+
+  .main-work__btn-text {
+    font-size: 14px;
+  }
+
+  .work-about__title {
+    font-size: 35px;
+  }
+
+  .work-about__title-pic {
+    width: 270px;
+    height: 90px;
+  }
+
+  .work-about__title-svg {
+    top: 10px;
+  }
+
+  .review__item {
+    width: 70%;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .review__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-about__title:after {
+    top: 155px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .contact-form__title {
+    font-size: 21px;
+    &:after {
+      top: 40px;
+    }
+  }
+}

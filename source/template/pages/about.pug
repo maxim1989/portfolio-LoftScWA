@@ -10,7 +10,8 @@ block variables
 block content
   body
     .wrapper.wrapper-about
-      header.section.header-about.font-water
+      header.section.header-about
+        img(src="assets/img/water.jpg").bg-forest
         .header-about__top
           ul.social
             li.social__item
@@ -42,7 +43,7 @@ block content
           .main-about__container
             h1.main-about__title ОБО МНЕ
             .main-about__avatar
-              img(src='assets/img/avatar.jpg', alt='Avatar').main-about__pic
+              img(src='assets/img/avatar.jpg', alt='Avatar').main-about__img
             h3.main-about__me КТО Я
             .main-about__content
               p.main-about__desc Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
@@ -94,3 +95,5 @@ block content
                   svg.contacts__svg.contacts__svg_address <use xlink:href="assets/img/sprite.svg#map_marker"></use>
                 .contacts__text Новосиборск, ул. Инская, д. 4
       +footer-main
+      include ../common/modal
+    script(src='/assets/js/app.js' defer)

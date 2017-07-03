@@ -31,24 +31,14 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
 .wrapper {
-  min-width: 1200px;
   min-height: 100%;
   overflow: hidden;
-}
-
-.container {
-  width: 1180px;
-  margin: 0 auto;
-  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .section {
@@ -56,27 +46,24 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100vh;
 }
 
-%clearfix {
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
-.font-water {
-  background-size: cover;
-  background-image: url("../img/water.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.bg-forest {
+  position: absolute;
+  z-index: -1;
+  transform: translate(-550px, -600px);
 }
 
 @import "font";
 @import "components/soc";
 @import "components/burger";
+@import "components/modal";
+@import "media/modal";
 @import "mixins/technology";
 @import "mixins/footer-main";
 @import "index";
+@import "media/index";
 @import "about";
+@import "media/about";
 @import "blog";
+@import "media/blog";
 @import "work";
+@import "media/work";
