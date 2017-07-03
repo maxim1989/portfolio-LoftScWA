@@ -1,0 +1,151 @@
+.wrapper-blog {
+  position: relative;
+}
+
+.header-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.header-blog__title-svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.header-blog__content {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-blog__pic {
+  fill: rgba(81, 128, 110, .5);
+  width: 302px;
+  height: 208px;
+}
+
+.header-blog__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header-blog__img {
+  width: 140px;
+  height: 140px;
+  vertical-align: middle;
+}
+
+.header-blog__title {
+  color: #fff;
+  font-family: sansus_webissimoregular, sans-serif;
+  font-size: 63px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 96px;
+  }
+}
+
+.header-blog__desc {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'robotoregular', sans-serif;
+  position: relative;
+}
+
+.blog-main {
+  background-color: #fbf8f1;
+  padding-bottom: 300px;
+  display: flex;
+}
+
+.triangle_fill_white {
+  fill: #fbf8f1;
+}
+
+.blog-main__left,
+.blog-main__right{
+  position: relative;
+}
+
+.blog-main__left {
+  width: 30%;
+  padding-left: 70px;
+  box-sizing: border-box;
+}
+
+.chapter {
+  text-align: right;
+  width: 70%;
+  padding-top: 10px;
+}
+
+.chapter__item {
+  color: #90988d;
+  margin-bottom: 40px;
+  font-family: 'robotomedium', sans-serif;
+  position: relative;
+
+  &_active {
+    color: #479132;
+    &:after {
+      content: "";
+      display: block;
+      height: 40px;
+      width: 3px;
+      background-color: #479132;
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.blog-main__right {
+  width: 70%;
+}
+
+.article {
+  width: 90%;
+}
+
+.article__name {
+  color: #55655a;
+  font-family: 'robotomedium', sans-serif;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.article__date {
+  color: #8da981;
+  margin-bottom: 25px;
+}
+
+.article__img {
+  margin-bottom: 25px;
+}
+
+.article__text {
+  max-height: 200px;
+  overflow: auto;
+  color: #90988d;
+  font-family: 'robotomedium', sans-serif;
+  margin-bottom: 25px;
+}
