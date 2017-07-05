@@ -10,6 +10,18 @@ block content
         div.wrapper.wrapper-blog
             header.section.header-blog
                 img(src="assets/img/water.jpg").bg-forest
+                .header-about__top
+                    ul.social
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_vk.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#vk"></use>
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_github.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#github"></use>
+                        li.social__item
+                            a(href="#").social__link
+                                svg.social__pic.social__pic_in.social__pic_fill_header-about <use xlink:href="assets/img/sprite.svg#in"></use>
+                    include ../common/burger
                 .header-blog__title-svg
                     svg.header-blog__pic <use xlink:href="assets/img/sprite.svg#blog_header"></use>
                 .header-blog__content
@@ -17,6 +29,8 @@ block content
                         img(src='assets/img/avatar.jpg', alt='Avatar').header-blog__img
                     h1.header-blog__title блог
                     p.header-blog__desc Статьи, которые я написал
+                a.arrow-down
+                    svg.arrow-down__pic <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
                 svg(viewbox="0 0 1000 185", preserveaspectratio="none").triangle
                     polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left.triangle_fill_white
                     polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right.triangle_fill_white

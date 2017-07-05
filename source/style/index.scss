@@ -164,7 +164,7 @@
   width: 340px;
   height: 50px;
 }
-//-----------------------------
+
 .checkbox-label {
   font-size: 16px;
   font-family: robotoregular, sans-serif;
@@ -257,8 +257,16 @@
   height: 8px;
 
 }
-//-----------------------------
+
+.menu {
+  font-size: 0;
+}
+
 .menu__item {
+  display: inline-block;
+}
+
+.menu__link {
   padding: 15px 30px;
   display: inline-block;
   background-color: #618f54;
@@ -280,7 +288,11 @@
 }
 
 .menu__item_width_half {
-  width: 33.5%;
+  width: 50%;
+}
+
+.menu__link_width_half {
+  width: 69%;
 }
 
 .menu__item + .menu__item {

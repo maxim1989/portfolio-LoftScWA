@@ -73,10 +73,7 @@
 
 .arrow-down {
   display: block;
-  position: absolute;
-  bottom: 220px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   padding: 20px;
 }
 

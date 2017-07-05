@@ -1,10 +1,14 @@
+- var vk = "https://vk.com/";
+- var github = "https://github.com/";
+- var linkIn = "https://www.linkedin.com/";
+
 ul.social
   li.social__item
-    a(href="#").social__link
+    a(href=vk, target="_blank").social__link
       svg.social__pic.social__pic_vk <use xlink:href="assets/img/sprite.svg#vk"></use>
   li.social__item
-    a(href="#").social__link
+    a(href=github, target="_blank").social__link
       svg.social__pic.social__pic_github <use xlink:href="assets/img/sprite.svg#github"></use>
   li.social__item
-    a(href="#").social__link
+    a(href=linkIn, target="_blank").social__link
       svg.social__pic.social__pic_in <use xlink:href="assets/img/sprite.svg#in"></use>

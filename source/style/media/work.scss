@@ -81,6 +81,10 @@
   .work-about__title:after {
     top: 215px;
   }
+
+  .main-work__flex-center {
+    height: 30%;
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -95,6 +99,22 @@
 
   .contact-form__message {
     width: 100%;
+  }
+
+  .main-work {
+    height: 200vh;
+  }
+
+  .current-work {
+    padding: 150px 0 70px 0;
+  }
+
+  .main-work__flex-center {
+    height: 40%;
+  }
+
+  .other-works {
+    height: 15%;
   }
 }
 
@@ -148,6 +168,7 @@
   .work-about__title:after {
     top: 155px;
   }
+
 }
 
 @media screen and (max-width: 230px) {

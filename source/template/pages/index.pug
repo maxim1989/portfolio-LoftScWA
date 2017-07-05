@@ -1,7 +1,11 @@
 extends ../_template
 
 block variables
-  - var title = 'Страница приветствия'
+  - var title = "Страница приветствия";
+  - var pageWork = "/work.html";
+  - var pageAbout = "/about.html";
+  - var pageBlog = "/blog.html";
+  - var pageHello = "/";
 
 block content
   body
@@ -18,10 +22,13 @@ block content
           .main-hello__name Фёдоров Максим
           .main-hello__description личный сайт веб разработчика
           include ../common/soc
-          .menu
-            a(href='#').menu__item мои работы
-            a(href='#').menu__item обо мне
-            a(href='#').menu__item блог
+          ul.menu
+            li.menu__item
+              a(href=pageWork).menu__link мои работы
+            li.menu__item
+              a(href=pageAbout).menu__link обо мне
+            li.menu__item
+              a(href=pageBlog).menu__link блог
         section.main-hello.main-hello__back
           .make-auth авторизируйтесь
           form(action="#").auth-form
@@ -46,8 +53,10 @@ block content
                 span.form__radio-fake
                 span.radio-label &nbsp;&nbsp;&nbsp;Не&nbsp;уверен
           .menu.menu__item_width_full
-            a(href='#').menu__item.menu__item_width_half на главную
-            a(href='#').menu__item.menu__item_width_half войти
+            li.menu__item.menu__item_width_half
+              a(href=pageHello).menu__link.menu__link_width_half на главную
+            li.menu__item.menu__item_width_half
+              a(href='#').menu__link.menu__link_width_half войти
 
       footer.footer
           include ../common/footer-owner

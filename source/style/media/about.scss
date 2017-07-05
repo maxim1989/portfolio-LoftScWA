@@ -81,16 +81,16 @@
   }
 
   .footer-about__section {
-    width: 30%;
+    width: 50%;
     padding: 5px;
+  }
+
+  .social {
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 320px) {
-  //.wrapper-about {
-  //  min-width: 320px;
-  //}
-
   .header-about__svg {
     display: none;
   }
