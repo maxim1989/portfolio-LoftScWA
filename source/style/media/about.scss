@@ -90,6 +90,12 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .technology__item {
+    margin-right: 15px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .header-about__svg {
     display: none;

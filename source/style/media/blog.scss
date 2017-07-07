@@ -30,6 +30,12 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .blog-main {
+    padding-bottom: 300px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .header-blog__title {
     font-size: 35px;

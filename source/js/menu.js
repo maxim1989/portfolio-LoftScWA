@@ -1,20 +1,27 @@
 $(document).ready(function () {
-    let menu = document.querySelector(".burger.burger_type_menu"),
-        close = document.querySelector(".modal__close-link"),
-        body = document.getElementsByTagName("body"),
-        setStyle = function (styleOne, styleTwo, hideScroll) {
-            let modal = document.querySelector(".modal");
-            menu.style.display = styleOne;
-            modal.style.display = styleTwo;
-            body[0].style.overflow = hideScroll;
+    let block = {
+        menu: document.querySelector(".burger.burger_type_menu"),
+        close: document.querySelector(".modal__close-link"),
+        body: document.getElementsByTagName("body"),
+        modal: document.querySelector(".modal"),
+        hide: function () {
+            this.menu.style.display = "none";
+            this.modal.style.display = "block";
+            this.body[0].style.overflow = "hidden";
+            },
+        show: function () {
+            this.menu.style.display = "block";
+            this.modal.style.display = "none";
+            this.body[0].style.overflow = "auto";
+            }
         };
 
-    if (menu) {
-        menu.addEventListener("click", function (e) {
-            setStyle("none", "block", "hidden");
+    if (block.menu) {
+        block.menu.addEventListener("click", function (e) {
+            block.hide();
         });
-        close.addEventListener("click", function (e) {
-            setStyle("block", "none", "auto");
+        block.close.addEventListener("click", function (e) {
+            block.show();
         })
     }
 });
