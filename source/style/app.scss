@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 ul {
@@ -56,6 +57,7 @@ p, h1, h2, h3, h4, h5, h6 {
 @import "components/soc";
 @import "components/burger";
 @import "components/modal";
+@import "components/preloader";
 @import "media/modal";
 @import "mixins/technology";
 @import "mixins/footer-main";
