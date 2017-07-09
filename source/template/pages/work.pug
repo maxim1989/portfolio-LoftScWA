@@ -3,12 +3,13 @@ extends ../_template
 include ../mixins/footer-main
 
 block variables
-    - var title = 'Обо мне'
+    - var title = 'Мои работы'
 
 block content
     body
         .wrapper.wrapper-work
-            header.section.header-about.font-water
+            header.section.header-about
+                img(src="assets/img/water.jpg").bg-forest
                 .header-about__top
                     ul.social
                         li.social__item
@@ -34,18 +35,18 @@ block content
                     polygon(points="0,0 0,186 500.8,186 500.8,75.5").triangle-left.triangle-left_fill_white
                     polygon(points="1000,0 1000,186 500,186 500,75.5").triangle-right.triangle-left_fill_white
             section.section.main-work
-                h1.main-work__title мои работы
+                h1.main-work__title мои&nbsp;работы
                 .main-work__title-svg
                     svg.main-work__title-pic <use xlink:href="assets/img/sprite.svg#works_header"></use>
                 div.main-work__content
                     .current-work
                         img(src='assets/img/work-1.png').current-work__pic
                     .main-work__flex-center
-                        h3(class="main-work__title main-work__title_left") сайт школы онлайн образования
-                        p(class="main-work__desc") HTML, CSS, JAVASCRIPT
-                        a(class="main-work__link-school" href="#")
-                            svg(class="main-work__link") <use xlink:href="assets/img/sprite.svg#link"></use>
-                            p(class="main-work__btn-text") Посмотреть сайт
+                        h3.main-work__title_left сайт школы онлайн образования
+                        p.main-work__desc HTML, CSS, JAVASCRIPT
+                        a(href="#").main-work__link-school
+                            svg.main-work__link <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p.main-work__btn-text Посмотреть сайт
                     .other-works
                         .other-works__down
                             .other-works__bg
@@ -60,7 +61,7 @@ block content
                     .leaf-1
                     .leaf-2
                     .leaf-3
-                h2(class="work-about__title") что обо мне говорят
+                h2(class="work-about__title") что&nbsp;обо мне говорят
                     div(class="work-about__title-svg")
                         svg(class="work-about__title-pic") <use xlink:href="assets/img/sprite.svg#about_header"></use>
                 .review
@@ -79,18 +80,21 @@ block content
                                 .reviewer__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузераз!
                                 .reviewer__name Сабанцев Владимир
                                 .reviewer__value - преподаватель
-                .contact-form
-                    h3.contact-form__title связаться со мной
-                    form(action="#").contact-form__form
-                        label(for="contact-form-name").contact-form__name-label
-                            input(type="text" placeholder="Имя").contact-form__name#contact-form-name
-                        label(for="contact-form-email").contact-form__email-label
-                            input(type="text" placeholder="email").contact-form__name#contact-form-email
-                        label(for="contact-message").contact__message-label
-                            textarea(placeholder="Ваше сообщение").contact-form__message#contact-form-message
-                    .contact-form__buttons
-                        a(href="#").contact-form__btn Отправить
-                        a(href="#").contact-form__btn Очистить
-                    a(href="#").contact-form__link
-                        svg(class="contact-form__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                .blur-wrapper
+                    .contact-form
+                        h3.contact-form__title связаться со мной
+                        form(action="#").contact-form__form
+                            label(for="contact-form-name").contact-form__name-label
+                                input(type="text" placeholder="Имя").contact-form__name#contact-form-name
+                            label(for="contact-form-email").contact-form__email-label
+                                input(type="text" placeholder="email").contact-form__name#contact-form-email
+                            label(for="contact-message").contact__message-label
+                                textarea(placeholder="Ваше сообщение").contact-form__message#contact-form-message
+                        .contact-form__buttons
+                            a(href="#").contact-form__btn Отправить
+                            a(href="#").contact-form__btn Очистить
+                        a(href="#").contact-form__link
+                            svg(class="contact-form__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
             +footer-main
+            include ../common/modal
+        script(src='/assets/js/app.js' defer)

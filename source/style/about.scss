@@ -73,10 +73,7 @@
 
 .arrow-down {
   display: block;
-  position: absolute;
-  bottom: 220px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   padding: 20px;
 }
 
@@ -133,7 +130,7 @@
 
 .main-about__title {
   font-family: 'robotomedium', sans-serif;
-  font-size: 44px;
+  font-size: 63px;
   text-align: center;
   position: relative;
   margin-bottom: 50px;
@@ -146,14 +143,18 @@
     background-color: black;
     left: 50%;
     transform: translateX(-50%);
-    top: 80px;
+    top: 105px;
   }
 }
 
 .main-about__avatar {
-  width: 390px;
-  height: 390px;
   margin-bottom: 40px;
+}
+
+.main-about__img {
+  width: 390px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .main-about__desc {
@@ -165,7 +166,7 @@
 
 .main-about__me {
   font-family: 'robotomedium', sans-serif;
-  font-size: 32px;
+  font-size: 35px;
   text-align: center;
   position: relative;
   color: #546056;

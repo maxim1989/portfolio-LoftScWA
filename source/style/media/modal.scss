@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+  .modal__title,
+  .modal__item {
+    font-size: 49px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal__title,
+  .modal__item {
+    font-size: 35px;
+  }
+}

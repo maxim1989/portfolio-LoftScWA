@@ -1,25 +1,59 @@
 extends ../_template
 
 block variables
-  - var title = 'Страница приветствия'
+  - var title = "Страница приветствия";
 
 block content
   body
     .wrapper.wrapper-hello
+      img(src="assets/img/water.jpg").bg-forest
       header.header-hello
         a(href="#").header-hello__auth
           span.header-hello__auth-btn Авторизироваться
 
-      section.main-hello
-        .main-hello__avatar
-          img(src='assets/img/avatar.jpg', alt='Avatar').main-hello__pic
-        .main-hello__name Фёдоров Максим
-        .main-hello__description личный сайт веб разработчика
-        include ../common/soc
-        .buttons
-          a(href='#').buttons__link мои работы
-          a(href='#').buttons__link обо мне
-          a(href='#').buttons__link блог
+      .card.effect-click
+        section.main-hello.main-hello__front
+          .main-hello__avatar
+            img(src='assets/img/avatar.jpg', alt='Avatar').main-hello__pic
+          .main-hello__name Фёдоров Максим
+          .main-hello__description личный сайт веб разработчика
+          include ../common/soc
+          ul.menu
+            li.menu__item
+              a(href=pageWork).menu__link мои работы
+            li.menu__item
+              a(href=pageAbout).menu__link обо мне
+            li.menu__item
+              a(href=pageBlog).menu__link блог
+        section.main-hello.main-hello__back
+          .make-auth авторизируйтесь
+          form(action="#").auth-form
+            label(for="auth-form-name").auth-form__name-label
+              img(src="assets/img/login.png").auth-form__login
+              input(type="text" placeholder="Логин").auth-form__name#auth-form-name
+            label(for="auth-form-email").auth-form__email-label
+              img(src="assets/img/password.png").auth-form__password
+              input(type="text" placeholder="Пароль").auth-form__name#auth-form-email
+            label(for="form__checkbox").form__radio-label
+              input(type="checkbox" name="payment" value="call" id="form__checkbox").form__checkbox-input
+              span.form__checkbox-fake
+              span.checkbox-label &nbsp;&nbsp;&nbsp;Я&nbsp;человек
+            .checkbox-label Вы точно не робот?
+            .radio
+              label(for="form__cash").form__radio-label
+                input(type="radio" name="payment" value="cash" id="form__cash").form__radio-input
+                span.form__radio-fake
+                span.radio-label &nbsp;&nbsp;&nbsp;Да
+              label(for="form__card").form__radio-label
+                input(type="radio" name="payment" value="card" id="form__card").form__radio-input
+                span.form__radio-fake
+                span.radio-label &nbsp;&nbsp;&nbsp;Не&nbsp;уверен
+          .menu.menu__item_width_full
+            li.menu__item.menu__item_width_half
+              a(href=pageHello).menu__link.menu__link_width_half на главную
+            li.menu__item.menu__item_width_half
+              a(href='#').menu__link.menu__link_width_half войти
 
       footer.footer
           include ../common/footer-owner
+    script(src='/assets/js/app.js' defer)
