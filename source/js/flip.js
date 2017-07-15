@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     if (flip.btn) {
         flip.btn.addEventListener("click", function (e) {
+            e.preventDefault();
             if (e.target.className == "header-hello__auth" || e.target.className == "header-hello__auth-btn") {
                 flip.makeAuth();
             }

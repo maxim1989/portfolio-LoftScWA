@@ -40,22 +40,53 @@ block content
                     svg.main-work__title-pic <use xlink:href="assets/img/sprite.svg#works_header"></use>
                 div.main-work__content
                     .current-work
-                        img(src='assets/img/work-1.png').current-work__pic
-                    .main-work__flex-center
+                        img(src='assets/img/work-1.png').current-work__pic.current-work__active-pic
+                        img(src='assets/img/work-2.png').current-work__pic
+                        img(src='assets/img/work-3.png').current-work__pic
+                        img(src='assets/img/work-4.png').current-work__pic
+                    .main-work__flex-center.main-work__flex-center-active
                         h3.main-work__title_left сайт школы онлайн образования
                         p.main-work__desc HTML, CSS, JAVASCRIPT
                         a(href="#").main-work__link-school
                             svg.main-work__link <use xlink:href="assets/img/sprite.svg#link"></use>
                             p.main-work__btn-text Посмотреть сайт
+                    .main-work__flex-center
+                        h3.main-work__title_left сайт школы онлайн образования
+                        p.main-work__desc 2
+                        a(href="#").main-work__link-school
+                            svg.main-work__link <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p.main-work__btn-text Посмотреть сайт
+                    .main-work__flex-center
+                        h3.main-work__title_left сайт школы онлайн образования
+                        p.main-work__desc 3
+                        a(href="#").main-work__link-school
+                            svg.main-work__link <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p.main-work__btn-text Посмотреть сайт
+                    .main-work__flex-center
+                        h3.main-work__title_left сайт школы онлайн образования
+                        p.main-work__desc 4
+                        a(href="#").main-work__link-school
+                            svg.main-work__link <use xlink:href="assets/img/sprite.svg#link"></use>
+                            p.main-work__btn-text Посмотреть сайт
                     .other-works
                         .other-works__down
+                            each val, idx in [3, 2, 1, 4]
+                                if val == 4
+                                    img(src="assets/img/work-" + val + ".png" style="top: 0").other-works__pic.other-works__pic-active
+                                else
+                                    img(src="assets/img/work-" + val + ".png" style="top: -" + 100 + "%").other-works__pic
                             .other-works__bg
                                 a(href="#").other-works__link
-                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                                    svg(class="other-works__arrow other-works__arrow_down") <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
                         .other-works__up
+                            each val, idx in [2, 3, 4, 1]
+                                if idx == 0
+                                    img(src="assets/img/work-" + val + ".png" style="top: 0").other-works__pic.other-works__pic-active
+                                else
+                                    img(src="assets/img/work-" + val + ".png" style="top: " + 100 + "%").other-works__pic
                             .other-works__bg
                                 a(href="#").other-works__link
-                                    svg(class="other-works__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                                    svg(class="other-works__arrow other-works__arrow_up") <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
             section(class='work-about')
                 .bg-stones
                     .leaf-1
@@ -97,4 +128,5 @@ block content
                             svg(class="contact-form__arrow" width='25px' height='23px') <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
             +footer-main
             include ../common/modal
+        include ../common/preloader
         script(src='/assets/js/app.js' defer)
