@@ -63,7 +63,7 @@
 }
 
 .main-work__flex-center {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -71,6 +71,10 @@
   order: -1;
   width: 50%;
   background-color: #ebefe1;
+}
+
+.main-work__flex-center-active {
+  display: flex;
 }
 
 .main-work__title_left {

@@ -1,20 +1,26 @@
-document.addEventListener("DOMContentLoaded", function (e) {
-    let slider = {
+const slider = (function(){
+    let block = {
         flag: true,
         timeOne: 400,
         timeTwo: 700,
         arrowDown: document.querySelector(".other-works__arrow_down"),
         arrowUp: document.querySelector(".other-works__arrow_up"),
 
-        moveHidden: function (element, position) {
-            setTimeout(function () {
-                element.style.visibility = "hidden";
+        moveHidden(element, position, visibility) {
+            setTimeout(() => {
+                element.style.visibility = visibility;
                 element.style.top = position;
             }, this.timeOne);
-            return element
         },
 
-        draw: function(all, current, sibling, hiddenSpace, animationSpace, pos1, pos2){
+        showHidden(element, visibility){
+            setTimeout(() => {
+                element.style.visibility = visibility;
+                block.flag = true;
+            }, this.timeTwo);
+        },
+
+        draw(all, current, sibling, hiddenSpace, animationSpace, pos1, pos2){
             if (sibling && sibling.classList.contains("other-works__pic")) {
                 let promise = new Promise((resolve, reject) => {
                     sibling.classList.add("other-works__pic-active");
@@ -24,17 +30,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     resolve(current);
                 });
                 promise.then(currentUp => {
-                    setTimeout(function () {
-                        currentUp.style.visibility = "hidden";
-                        currentUp.style.top = hiddenSpace;
-                        }, this.timeOne);
+                    this.moveHidden(currentUp, hiddenSpace, "hidden");
                     return currentUp
                 }).then(
                     currentUp => {
-                        setTimeout(function () {
-                            currentUp.style.visibility = "visible";
-                            slider.flag = true;
-                            }, this.timeTwo);
+                        this.showHidden(currentUp, "visible");
                     });
             } else {
                 let promise = new Promise((resolve, reject) => {
@@ -45,33 +45,45 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     resolve(all[pos2]);
                 });
                 promise.then(last => {
-                    setTimeout(function () {
-                        last.style.visibility = "hidden";
-                        last.style.top = hiddenSpace;
-                        }, this.timeOne);
+                    this.moveHidden(last, hiddenSpace, "hidden");
                     return last;
                 }).then(last => {
-                    setTimeout(function () {
-                        last.style.visibility = "visible";
-                        slider.flag = true;
-                        }, this.timeTwo);
+                    this.showHidden(last, "visible");
                 })
             }
         },
 
-        nextMain: function(){
-            let currentMain = document.querySelector(".current-work__pic.current-work__active-pic"),
-                next = currentMain.nextElementSibling,
-                allMain = document.querySelectorAll(".current-work__pic");
-            currentMain.classList.remove("current-work__active-pic");
-            if (next && next.classList.contains("current-work__pic")) {
-                next.classList.add("current-work__active-pic");
-            } else {
-                allMain[0].classList.add("current-work__active-pic");
+        nextMain(){
+            let allMain = document.querySelectorAll(".current-work__pic");
+            for (let i = 0; i < allMain.length; i++) {
+                if (allMain[i].classList.contains("current-work__active-pic")) {
+                    allMain[i].classList.remove("current-work__active-pic");
+                    if (i + 1 <= allMain.length - 1) {
+                        allMain[i + 1].classList.add("current-work__active-pic");
+                    } else {
+                        allMain[0].classList.add("current-work__active-pic");
+                    }
+                    break;
+                }
             }
         },
 
-        click: function () {
+        nextDescription(){
+            let allMain = document.querySelectorAll(".main-work__flex-center");
+            for (let i = 0; i < allMain.length; i++) {
+                if (allMain[i].classList.contains("main-work__flex-center-active")) {
+                    allMain[i].classList.remove("main-work__flex-center-active");
+                    if (i + 1 <= allMain.length - 1) {
+                        allMain[i + 1].classList.add("main-work__flex-center-active");
+                    } else {
+                        allMain[0].classList.add("main-work__flex-center-active");
+                    }
+                    break;
+                }
+            }
+        },
+
+        click() {
             this.flag = false;
             let currentUp = document.querySelector(".other-works__up > .other-works__pic-active"),
                 allUp = document.querySelectorAll(".other-works__up > .other-works__pic"),
@@ -82,27 +94,30 @@ document.addEventListener("DOMContentLoaded", function (e) {
             this.draw(allDown, currentDown, previousDown, "-100%", "100%", allDown.length - 1, 0);
             this.draw(allUp, currentUp, nextUp, "100%", "-100%", 0, allUp.length - 1);
             this.nextMain();
+            this.nextDescription();
         },
 
-        arrowDownClick: function (e) {
+        arrowClick(e) {
             e.preventDefault();
-            if (slider.flag) {
-                slider.click();
-            }
-        },
-
-        arrowUpClick: function (e) {
-            e.preventDefault();
-            if (slider.flag) {
-                slider.click();
+            if (block.flag) {
+                block.click();
             }
         }
     };
-
-    if (slider.arrowDown){
-        slider.arrowDown.addEventListener("click", slider.arrowDownClick);
+    return {
+        eventFoo: block.arrowClick,
+        arrowDown: block.arrowDown,
+        arrowUp: block.arrowUp
     }
-    if (slider.arrowUp){
-        slider.arrowUp.addEventListener("click", slider.arrowUpClick);
+});
+
+
+document.addEventListener("DOMContentLoaded", function (e) {
+    let sl = slider();
+    if (sl.arrowDown){
+        sl.arrowDown.addEventListener("click", sl.eventFoo);
+    }
+    if (sl.arrowUp){
+        sl.arrowUp.addEventListener("click", sl.eventFoo);
     }
 });
